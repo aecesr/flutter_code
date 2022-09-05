@@ -3,10 +3,13 @@ import 'package:first_flutter_app/pages/AspectRatioPage.dart';
 import 'package:first_flutter_app/pages/ButtonPage.dart';
 import 'package:first_flutter_app/pages/CardPage.dart';
 import 'package:first_flutter_app/pages/ColumnPage.dart';
+import 'package:first_flutter_app/pages/DialogPage.dart';
 import 'package:first_flutter_app/pages/ExpandedPage.dart';
 import 'package:first_flutter_app/pages/FormPage1.dart';
 import 'package:first_flutter_app/pages/GridView1.dart';
+import 'package:first_flutter_app/pages/HttpPage.dart';
 import 'package:first_flutter_app/pages/LayoutPage.dart';
+import 'package:first_flutter_app/pages/NewsPage.dart';
 import 'package:first_flutter_app/pages/PaddingPage.dart';
 import 'package:first_flutter_app/pages/RowPage.dart';
 import 'package:first_flutter_app/pages/StackPage1.dart';
@@ -15,10 +18,13 @@ import 'package:first_flutter_app/pages/list_page3.dart';
 import 'package:flutter/material.dart';
 
 import 'AppBarPage.dart';
+import 'DataPage.dart';
+import 'DatePicker.dart';
 import 'DrawerPage.dart';
 import 'FloatingActionButtonPage.dart';
 import 'FormWidget.dart';
 import 'GridView2.dart';
+import 'MydialogPage.dart';
 import 'list_page.dart';
 import 'list_page2.dart';
 
@@ -333,6 +339,47 @@ class ImageWidget extends StatelessWidget {
                         }));
                   },
                   child: const Text('跳转到学员登记系统页面')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (BuildContext context) {
+                          return const DatePage();
+                        }));
+                  },
+                  child: const Text('跳转到时间组件页面')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (BuildContext context) {
+                          return const DatePickerPubDemo();
+                        }));
+                  },
+                  child: const Text('跳转到日期选择页面')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (BuildContext context) {
+                          return const DialogPage();
+                        }));
+                  },
+                  child: const Text('跳转到弹出框页面')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (BuildContext context) {
+                          return const HttpPage();
+                        }));
+                  },
+                  child: const Text('跳转到网络请求页面')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (BuildContext context) {
+                          return const NewsPage();
+                        }));
+                  },
+                  child: const Text('跳转到新闻页面')),
+
             ],
           ),
         ),

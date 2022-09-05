@@ -13,29 +13,15 @@ class AppBarPage extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: Colors.red,
             leading: IconButton(
-              icon: const Icon(Icons.menu),
-              tooltip: "Search",
+              icon: const Icon(Icons.chevron_left),
               onPressed: () {
-                // Navigator.of(context).pop();
+                Navigator.of(context).pop();
                 // Navigator.pushNamed(context, 'search');
               },
             ),
-            title: const Text("Flutter AppBar"),
-            actions: [
-              IconButton(
-                  onPressed: () {
-                    // Navigator.of(context).pop();
-                    // Navigator.pushNamed(context, 'search');
-                  },
-                  tooltip: "Search",
-                  icon: const Icon(Icons.search)),
-              IconButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, "/button");
-                  },
-                  tooltip: "more_horiz",
-                  icon: const Icon(Icons.more_horiz)),
-            ],
+            title: Center(
+              child:Text('Flutter AppBar'),
+            ),
             bottom: const TabBar(tabs: [
               Tab(
                 text: "热门",
